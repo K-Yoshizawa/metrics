@@ -1,7 +1,8 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 * * * *"}] # 毎時実行
-  workflow_dispatch: # 手動実行も可
+  schedule: [{cron: "0 0 * * *"}]  # 毎日0時に更新
+  workflow_dispatch:
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -10,5 +11,33 @@ jobs:
         with:
           filename: github-metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header, activity, community, repositories, metadata
+
+          # ベース情報
+          base: header, repositories, activity, community, metadata
           config_timezone: Asia/Tokyo
+
+          # 📅 Isometric commit calendar
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          # 📓 Featured repositories (Pinned)
+          plugin_repositories: yes
+          plugin_repositories_pinned: 4  # 最大6件まで指定可能
+
+          # 🏆 Achievements
+          plugin_achievements: yes
+          plugin_achievements_display: detailed
+          plugin_achievements_threshold: C
+
+          # 📰 Recent activity
+          plugin_activity: yes
+          plugin_activity_limit: 5
+          plugin_activity_days: 14
+          plugin_activity_filter: all
+
+          # 🎼 Music activity (Last.fm)
+          plugin_music: yes
+          plugin_music_provider: lastfm
+          plugin_music_token: ${{ secrets.LASTFM_TOKEN }}
+          plugin_music_mode: recent
+          plugin_music_limit: 5

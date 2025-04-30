@@ -14,6 +14,7 @@ jobs:
 
           # ベース情報
           base: header, metadata
+          config_display: large
           config_timezone: Asia/Tokyo
 
           # 📅 Isometric commit calendar
@@ -25,8 +26,15 @@ jobs:
           filename: github-metrics-2.svg
           token: ${{ secrets.METRICS_TOKEN }}
           
+          config_order: |
+            languages
+            habits, activity
+            repositories
+            music, wakatime
+          
           # ベース情報
           base: ""
+          config_display: large
           config_timezone: Asia/Tokyo
 
           # 📊 Most used languages
@@ -63,3 +71,11 @@ jobs:
           # 🔗 Socials
           plugin_social: yes
           plugin_social_accounts: twitter
+
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
+          plugin_wakatime_days: 7
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, editors
+          plugin_wakatime_limit: 5
+          plugin_wakatime_url: https://wakatime.com
+          plugin_wakatime_user: log_K

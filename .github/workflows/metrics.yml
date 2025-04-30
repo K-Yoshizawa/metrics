@@ -26,16 +26,17 @@ jobs:
           filename: github-metrics-2.svg
           token: ${{ secrets.METRICS_TOKEN }}
           
+          # ベース情報
+          base: header
+          config_display: large
+          config_timezone: Asia/Tokyo
+          config_columns: 2
           config_order: |
             languages
             habits, activity
             repositories
             music, wakatime
-          
-          # ベース情報
-          base: ""
-          config_display: large
-          config_timezone: Asia/Tokyo
+            social
 
           # 📊 Most used languages
           plugin_languages: yes

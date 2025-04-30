@@ -1,0 +1,14 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 * * * *"}] # 毎時実行
+  workflow_dispatch: # 手動実行も可
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Tokyo

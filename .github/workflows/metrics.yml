@@ -16,6 +16,10 @@ jobs:
           base: header, metadata
           config_display: large
           config_timezone: Asia/Tokyo
+          
+          # 🔗 Socials
+          plugin_social: yes
+          plugin_social_accounts: twitter:Selfgrudge
 
           # 📅 Isometric commit calendar
           plugin_isocalendar: yes
@@ -49,11 +53,11 @@ jobs:
           plugin_repositories: yes
           plugin_repositories_pinned: 4  # 最大6件まで指定可能
 
-          # 📰 Recent activity
-          plugin_activity: yes
-          plugin_activity_limit: 10
-          plugin_activity_days: 14
-          plugin_activity_filter: all
+          # # 📰 Recent activity
+          # plugin_activity: yes
+          # plugin_activity_limit: 10
+          # plugin_activity_days: 14
+          # plugin_activity_filter: all
 
           # 🎼 Music activity (Last.fm)
           plugin_music: yes
@@ -63,11 +67,8 @@ jobs:
           plugin_music_user: log_K
           plugin_music_limit: 10
           plugin_music_top_type: artists
-          
-          # 🔗 Socials
-          plugin_social: yes
-          plugin_social_accounts: twitter
 
+          # Wakatime
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_days: 7

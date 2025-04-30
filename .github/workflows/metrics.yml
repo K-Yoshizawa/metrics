@@ -27,11 +27,11 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           
           # ベース情報
-          base: header
+          base: ""
           config_display: large
           config_timezone: Asia/Tokyo
           # config_columns: 2
-          config_order: languages, habits, activity, repositories, music, wakatime, social
+          config_order: languages, habits, activity, repositories, music, wakatime
 
           # 📊 Most used languages
           plugin_languages: yes

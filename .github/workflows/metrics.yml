@@ -30,13 +30,8 @@ jobs:
           base: header
           config_display: large
           config_timezone: Asia/Tokyo
-          config_columns: 2
-          config_order: |
-            languages
-            habits, activity
-            repositories
-            music, wakatime
-            social
+          # config_columns: 2
+          config_order: languages, habits, activity, repositories, music, wakatime, social
 
           # 📊 Most used languages
           plugin_languages: yes

@@ -564,13 +564,13 @@
                         <div class="chart-bars horizontal">
                             <div class="entry">
                                 <span class="name">university</span>
-                                <div class="bar" style="width: 58.224000000000004%; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
-                                <span class="value">73%</span>
+                                <div class="bar" style="width: 59.55199999999999%; background-color: var(--color-calendar-graph-day-L3-bg)"></div>
+                                <span class="value">74%</span>
                             </div>
                             <div class="entry">
                                 <span class="name">Procon</span>
-                                <div class="bar" style="width: 21.776%; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
-                                <span class="value">27%</span>
+                                <div class="bar" style="width: 20.448%; background-color: var(--color-calendar-graph-day-L2-bg)"></div>
+                                <span class="value">26%</span>
                             </div>
                         </div>
                     </section>
